@@ -91,6 +91,7 @@
             margin: 20px auto;
         }
 @media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 768px) {
     .col-2,
     .col-9 {
         margin: 10px;
@@ -98,13 +99,16 @@
     }
 
     .attraction {
-        flex-direction: column; /* Stack the text below the image */
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
     }
 
     .attraction img {
-        margin: 10px auto; /* Center the image */
-        order: 2; /* Change the order to display image on the right */
+        width: 150px;
+        height: 150px;
+        order: 2; /* Display image above text */
     }
 
     .p {
@@ -120,17 +124,38 @@
             .row {
                 margin: 50px;
             }
+  .row {
+        margin: 50px;
+    }
 
-            .col-2,
-            .col-9 {
-                padding: 20px;
-                font-size: 20px;
-            }
+    .col-2,
+    .col-9 {
+        padding: 20px;
+        font-size: 20px;
+    }
 
-            header {
-                padding: 10px;
-            }
-        }
+    header {
+        padding: 10px;
+    }
+
+    .attraction {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Align images to the right */
+        margin-bottom: 20px;
+    }
+
+    .attraction img {
+        width: 150px;
+        height: 150px;
+        order: 1; /* Display image to the left of text */
+        margin-bottom: 10px;
+    }
+
+    .p {
+        text-align: right; /* Right-align the text */
+    }
+}
 
         @media only screen and (max-width: 768px) {
 .col-2,
