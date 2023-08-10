@@ -90,7 +90,28 @@
             width: 75%;
             margin: 20px auto;
         }
+@media only screen and (max-width: 768px) {
+    .col-2,
+    .col-9 {
+        margin: 10px;
+        padding: 10px; /* Increase padding for better spacing */
+    }
 
+    .attraction {
+        flex-direction: column; /* Stack the text below the image */
+        align-items: center;
+    }
+
+    .attraction img {
+        margin: 10px auto; /* Center the image */
+        order: 2; /* Change the order to display image on the right */
+    }
+
+    .p {
+        text-align: center; /* Center-align the text */
+    }
+}
+        
         @media only screen and (min-width: 768px) {
             body {
                 background-color: red;
