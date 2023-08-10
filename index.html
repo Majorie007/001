@@ -112,7 +112,7 @@
         }
 
         @media only screen and (max-width: 768px) {
-     .col-2,
+.col-2,
     .col-9 {
         margin: 10px;
         padding: 10px; /* Increase padding for better spacing */
@@ -130,6 +130,14 @@
 
     .p {
         text-align: center; /* Center-align the text */
+    }
+    
+    .col-2 {
+        flex: 0 0 calc(50% - 20px); /* Adjust for margin */
+    }
+    
+    .col-9 {
+        flex: 0 0 calc(50% - 20px); /* Adjust for margin */
     }
 }
     </style>
