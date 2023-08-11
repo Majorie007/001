@@ -113,22 +113,22 @@
         text-align: center; /* Center-align the text */
     }
 }
-        @media only screen and (min-width: 768px) {
-            body {
-                background-color: red;
-            }
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: red;
+    }
 
-            .row {
-                margin: 50px;
-            }
-  .row {
+    .row {
         margin: 50px;
+        display: flex; /* Add flex display to make columns appear side by side */
+        flex-wrap: nowrap; /* Prevent columns from wrapping */
     }
 
     .col-2,
     .col-9 {
         padding: 20px;
         font-size: 20px;
+        flex: 1; /* Allow columns to take equal width */
     }
 
     header {
@@ -138,19 +138,19 @@
     .attraction {
         display: flex;
         flex-direction: column;
-        align-items: flex-end; /* Align images to the right */
+        align-items: flex-end;
         margin-bottom: 20px;
     }
 
     .attraction img {
         width: 150px;
         height: 150px;
-        order: 1; /* Display image to the left of text */
+        order: 1;
         margin-bottom: 10px;
     }
 
     .p {
-        text-align: right; /* Right-align the text */
+        text-align: right;
     }
 }
         @media only screen and (max-width: 768px) {
