@@ -90,30 +90,35 @@
             margin: 20px auto;
         }
  @media only screen and (max-width: 768px) {
-    .col-2,
-    .col-9 {
-        margin: 10px;
-        padding: 10px; /* Increase padding for better spacing */
-    }
+        .col-2,
+        .col-9 {
+            margin: 10px;
+            padding: 10px; /* Increase padding for better spacing */
+        }
 
-    .attraction {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+        .row {
+            flex-direction: column; /* Stacking for mobile */
+        }
 
-    .attraction img {
-        width: 150px;
-        height: 150px;
-        order: 2; /* Display image above text */
-    }
+        .attraction {
+            flex-direction: column; /* Stack the text below the image */
+            align-items: center;
+        }
 
-    .p {
-        text-align: center; /* Center-align the text */
-    }
-}
-@media only screen and (min-width: 768px) {
+        .attraction img {
+            margin: 10px auto; /* Center the image */
+            order: 2; /* Change the order to display image on the right */
+        }
+
+        .p {
+            text-align: center; /* Center-align the text */
+        }
+
+        .col-2,
+        .col-9 {
+            flex: 0 0 calc(50% - 20px); /* Adjust for margin */
+        }
+    }@media only screen and (min-width: 768px) {
     body {
         background-color: red;
     }
