@@ -89,7 +89,7 @@
             width: 75%;
             margin: 20px auto;
         }
- @media only screen and (max-width: 768px) {
+     @media only screen and (max-width: 768px) {
         .col-2,
         .col-9 {
             margin: 10px;
@@ -113,80 +113,26 @@
         .p {
             text-align: center; /* Center-align the text */
         }
-
+        
         .col-2,
         .col-9 {
-            flex: 0 0 calc(50% - 20px); /* Adjust for margin */
+            flex: 0 0 calc(100% - 20px); /* Adjust for margin */
         }
-    }@media only screen and (min-width: 768px) {
-    body {
-        background-color: red;
     }
 
-    .row {
-        margin: 50px;
-        display: flex; /* Add flex display to make columns appear side by side */
-        flex-wrap: nowrap; /* Prevent columns from wrapping */
-    }
+    @media only screen and (min-width: 769px) {
+        .row {
+            justify-content: space-between; /* Display col-2 and col-9 side by side */
+        }
 
-    .col-2,
-    .col-9 {
-        padding: 20px;
-        font-size: 20px;
-        flex: 1; /* Allow columns to take equal width */
-    }
+        .col-2 {
+            flex: 0 0 calc(40% - 20px); /* Adjust for margin */
+        }
 
-    header {
-        padding: 10px;
-    }
-
-    .attraction {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        margin-bottom: 20px;
-    }
-
-    .attraction img {
-        width: 150px;
-        height: 150px;
-        order: 1;
-        margin-bottom: 10px;
-    }
-
-    .p {
-        text-align: right;
-    }
-}
-        @media only screen and (max-width: 768px) {
-.col-2,
-    .col-9 {
-        margin: 10px;
-        padding: 10px; /* Increase padding for better spacing */
-    }
-
-    .attraction {
-        flex-direction: column; /* Stack the text below the image */
-        align-items: center;
-    }
-
-    .attraction img {
-        margin: 10px auto; /* Center the image */
-        order: 2; /* Change the order to display image on the right */
-    }
-
-    .p {
-        text-align: center; /* Center-align the text */
-    }
-    
-    .col-2 {
-        flex: 0 0 calc(50% - 20px); /* Adjust for margin */
-    }
-    
-    .col-9 {
-        flex: 0 0 calc(50% - 20px); /* Adjust for margin */
-    }
-}
+        .col-9 {
+            flex: 0 0 calc(60% - 20px); /* Adjust for margin */
+        }
+    } 
     </style>
 </head>
 
